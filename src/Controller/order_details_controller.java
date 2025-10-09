@@ -12,23 +12,23 @@ public class order_details_controller {
 
     private final order_details_view view;
     private final order_details_model model;
-    private int currentOrderId; // track the temporary order ID before saving
+    private int currentOrderId; 
 
     public order_details_controller(order_details_view view, order_details_model model) {
         this.view = view;
         this.model = model;
 
-        // Load item IDs
+        
         model.loadItemIds(view.jComboBox1);
 
-        // Generate a new temporary order ID (next from DB)
+        
         currentOrderId = model.getNextOrderId();
         System.out.println("Temporary Order ID started: " + currentOrderId);
 
         addListeners();
     }
 
-    // Add all listeners
+    
     private void addListeners() {
         view.jComboBox1.addActionListener(new ComboBoxListener());
         view.btnadd.addActionListener(new AddAction());
@@ -36,7 +36,7 @@ public class order_details_controller {
         view.btnback.addActionListener(new BackAction());
     }
 
-    // Load item info when selected
+    
     class ComboBoxListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             String selectedId = (String) view.jComboBox1.getSelectedItem();
@@ -56,7 +56,6 @@ public class order_details_controller {
         }
     }
 
-    //Add button — Add item to JTable (with visible order ID)
     class AddAction implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             try {
@@ -76,7 +75,7 @@ public class order_details_controller {
                 DefaultTableModel tableModel = (DefaultTableModel) view.tbldetails.getModel();
 
                 Object[] row = {
-                    currentOrderId, // show current order ID in table
+                    currentOrderId, 
                     itemId,
                     name,
                     qty,
@@ -87,7 +86,7 @@ public class order_details_controller {
                 };
                 tableModel.addRow(row);
 
-                // Update total
+               
                 double total = 0;
                 for (int i = 0; i < tableModel.getRowCount(); i++) {
                     total += Double.parseDouble(tableModel.getValueAt(i, 7).toString());
@@ -103,7 +102,7 @@ public class order_details_controller {
         }
     }
 
-    // Confirm Order — Save all to DB
+   
     class ConfirmOrderAction implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             DefaultTableModel modelTable = (DefaultTableModel) view.tbldetails.getModel();
@@ -113,7 +112,7 @@ public class order_details_controller {
                 return;
             }
 
-            // Calculate total
+            
             double total = 0;
             for (int i = 0; i < modelTable.getRowCount(); i++) {
                 total += Double.parseDouble(modelTable.getValueAt(i, 7).toString());
@@ -123,11 +122,11 @@ public class order_details_controller {
             if (ok) {
                 JOptionPane.showMessageDialog(view, "Order saved to database!\nOrder ID: " + currentOrderId);
 
-                // Clear table for next order
+               
                 modelTable.setRowCount(0);
                 view.jTextField1.setText("0.00");
 
-                // Start new order ID for next order
+                
                 currentOrderId = model.getNextOrderId();
                 System.out.println("New Temporary Order ID started: " + currentOrderId);
             } else {
@@ -136,7 +135,7 @@ public class order_details_controller {
         }
     }
 
-    // Back to dashboard
+    
     class BackAction implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             View.dashboard_view dashView = new View.dashboard_view();
@@ -147,3 +146,4 @@ public class order_details_controller {
         }
     }
 }
+

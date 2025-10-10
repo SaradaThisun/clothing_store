@@ -16,11 +16,11 @@ public class user_registration_controller {
         this.view = view;
         this.model = model;
 
-        // attach register button listener
+        
         this.view.addbtnRegisterListener(new RegisterListener());
     }
 
-    // Inner class for handling registration
+    
     class RegisterListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -28,7 +28,7 @@ public class user_registration_controller {
             String username = view.getUsername();
             String password = view.getPassword();
 
-            // Validation before sending to DB
+            // Validation before sending to Database
             if (userId.isEmpty() || username.isEmpty() || password.isEmpty()) {
                 JOptionPane.showMessageDialog(view, "All fields are required!");
                 return;
@@ -39,7 +39,7 @@ public class user_registration_controller {
             if (success) {
                 JOptionPane.showMessageDialog(view, "User Registered Successfully!");
 
-                // Optionally go back to login screen
+                //  back to login screen
                 View.login_view loginView = new View.login_view();
                 Model.login_model loginModel = new Model.login_model(); // if you already have one
                 new Controller.login_controller(loginView, loginModel);
@@ -53,3 +53,4 @@ public class user_registration_controller {
     }
     
 }
+

@@ -16,12 +16,12 @@ public class dashboard_controller {
         this.view = view;
         this.model = model;
 
-        // Attach listeners
+      
         this.view.addItemsListener(new ItemsListener());
         this.view.addOrderDetailsListener(new OrderDetailsListener());
         this.view.addReportsListener(new ReportsListener());
 
-        // Optionally show summary data
+        
         showSummary();
     }
 
@@ -35,7 +35,7 @@ public class dashboard_controller {
         System.out.println("Order Details: " + detailCount);
     }
 
-    // When Items button clicked
+    
     class ItemsListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
@@ -48,7 +48,7 @@ public class dashboard_controller {
     }
 
 
-    // When Order Details clicked
+   
     class OrderDetailsListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
@@ -60,7 +60,7 @@ public class dashboard_controller {
         }
     }
 
-        // When Reports clicked
+        
         class ReportsListener implements ActionListener {
 
             public void actionPerformed(ActionEvent e) {
@@ -70,3 +70,4 @@ public class dashboard_controller {
             }
         }
     }
+

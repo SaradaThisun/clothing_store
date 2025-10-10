@@ -31,7 +31,7 @@ public class user_registration_model {
         }
     }
 
-    // Verify login (you can use this in your login controller)
+    // Verify login 
     public boolean verifyLogin(String username, String password) {
         String sql = "SELECT * FROM users WHERE username=? AND password=?";
 
@@ -42,7 +42,7 @@ public class user_registration_model {
             stmt.setString(2, password);
 
             ResultSet rs = stmt.executeQuery();
-            return rs.next(); // returns true if user found
+            return rs.next(); 
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -50,3 +50,4 @@ public class user_registration_model {
         }
     }
 }
+

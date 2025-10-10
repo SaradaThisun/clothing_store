@@ -16,12 +16,12 @@ public class user_registration extends javax.swing.JFrame {
         initComponents();
          setLocationRelativeTo(null);
 
-        // Add background image safely (no AbsoluteLayout)
+
         JLabel background = new JLabel(new ImageIcon(getClass().getResource("/images/blure02.png")));
         setContentPane(background);
         background.setLayout(new BorderLayout());
 
-        // Make panel transparent and add back
+ 
         jPanel1.setOpaque(false);
         background.add(jPanel1, BorderLayout.CENTER);
     }
@@ -48,7 +48,7 @@ public class user_registration extends javax.swing.JFrame {
 
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -64,18 +64,18 @@ public class user_registration extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); 
         jLabel1.setText("USER REGISTRATION");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("User Id");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("User Name");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); 
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Password");
 
@@ -153,16 +153,16 @@ public class user_registration extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void btnregbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnregbackActionPerformed
+    private void btnregbackActionPerformed(java.awt.event.ActionEvent evt) {
         login_view logView = new login_view();
         logView.setVisible(true);
         logView.pack();
         logView.setLocationRelativeTo(null);
 
         this.dispose();
-    }//GEN-LAST:event_btnregbackActionPerformed
+    }
 
     
     public static void main(String args[]) {
@@ -176,7 +176,7 @@ public class user_registration extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration
     private javax.swing.JButton btnregback;
     private javax.swing.JButton btnregister;
     private javax.swing.JLabel jLabel1;
@@ -187,5 +187,5 @@ public class user_registration extends javax.swing.JFrame {
     private javax.swing.JTextField txtregpassword;
     private javax.swing.JTextField txtreguserid;
     private javax.swing.JTextField txtregusername;
-    // End of variables declaration//GEN-END:variables
+    
 }

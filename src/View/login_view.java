@@ -16,12 +16,12 @@ public class login_view extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
 
-        //Add background image safely (no AbsoluteLayout)
+        
         JLabel background = new JLabel(new ImageIcon(getClass().getResource("/images/blure02.png")));
         setContentPane(background);
         background.setLayout(new BorderLayout());
 
-        // Make panel transparent and add back
+        
         jPanel1.setOpaque(false);
         background.add(jPanel1, BorderLayout.CENTER);
     }
@@ -52,7 +52,7 @@ public class login_view extends javax.swing.JFrame {
     }
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -67,14 +67,14 @@ public class login_view extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); 
         jLabel1.setText("CLOTHYFY STORE");
 
-        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("User Name");
 
-        jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Password");
 
@@ -84,7 +84,7 @@ public class login_view extends javax.swing.JFrame {
             }
         });
 
-        btnlogin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnlogin.setFont(new java.awt.Font("Segoe UI", 1, 12)); 
         btnlogin.setText("Login");
         btnlogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,7 +92,7 @@ public class login_view extends javax.swing.JFrame {
             }
         });
 
-        btnclose.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnclose.setFont(new java.awt.Font("Segoe UI", 1, 12)); 
         btnclose.setText("Close");
         btnclose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,7 +100,7 @@ public class login_view extends javax.swing.JFrame {
             }
         });
 
-        btnsignup.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnsignup.setFont(new java.awt.Font("Segoe UI", 1, 12)); 
         btnsignup.setText("Sign up");
         btnsignup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,24 +167,24 @@ public class login_view extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void btnloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnloginActionPerformed
+    private void btnloginActionPerformed(java.awt.event.ActionEvent evt) {
         
-    }//GEN-LAST:event_btnloginActionPerformed
+    }
 
-    private void btnsignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsignupActionPerformed
+    private void btnsignupActionPerformed(java.awt.event.ActionEvent evt) {
     
        
-    }//GEN-LAST:event_btnsignupActionPerformed
+    }
 
-    private void btncloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncloseActionPerformed
+    private void btncloseActionPerformed(java.awt.event.ActionEvent evt) {
         this.dispose();
-    }//GEN-LAST:event_btncloseActionPerformed
+    }
 
-    private void txtpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtpasswordActionPerformed
+    private void txtpasswordActionPerformed(java.awt.event.ActionEvent evt) {
+        
+    }
 
     
     
@@ -199,7 +199,7 @@ public class login_view extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration 
     private javax.swing.JButton btnclose;
     private javax.swing.JButton btnlogin;
     private javax.swing.JButton btnsignup;
@@ -209,5 +209,5 @@ public class login_view extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtpassword;
     private javax.swing.JTextField txtusername;
-    // End of variables declaration//GEN-END:variables
+    
 }

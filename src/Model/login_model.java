@@ -20,7 +20,7 @@ public class login_model {
                 stmt.setString(2, password);
 
                 ResultSet rs = stmt.executeQuery();
-                return rs.next(); // true if user found
+                return rs.next();
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -28,3 +28,4 @@ public class login_model {
         }
     }
 }
+

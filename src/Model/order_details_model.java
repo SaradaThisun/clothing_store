@@ -38,10 +38,9 @@ public class order_details_model {
         }
     }
 
-    // Save full order (summary + details)
     public boolean saveOrder(DefaultTableModel tableModel, double total) {
         if (tableModel.getRowCount() == 0) {
-            System.out.println("⚠️ No items to save.");
+            System.out.println(" No items to save.");
             return false;
         }
 
@@ -53,9 +52,9 @@ public class order_details_model {
 
         try {
             conn = DriverManager.getConnection(URL, USER, PASSWORD);
-            conn.setAutoCommit(false); // transaction
+            conn.setAutoCommit(false);
 
-            // 1️⃣ Insert into orders_summary
+            
             String summarySQL = "INSERT INTO orders_summary (total) VALUES (?)";
             summaryStmt = conn.prepareStatement(summarySQL, Statement.RETURN_GENERATED_KEYS);
             summaryStmt.setDouble(1, total);
@@ -65,7 +64,7 @@ public class order_details_model {
             int orderId = 0;
             if (rs.next()) orderId = rs.getInt(1);
 
-            // 2️⃣ Insert all items into order_details
+            
             String detailSQL = """
                 INSERT INTO order_details (order_id, item_id, name, qty, type, size, price, total_price)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)
@@ -120,3 +119,4 @@ public int getNextOrderId() {
 }
 
 }
+

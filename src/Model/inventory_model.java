@@ -83,9 +83,9 @@ public class inventory_model {
         }
     }
 
-    // Load all items to JTable
+    // Load all items to Table
     public void loadItemsToTable(DefaultTableModel tableModel) {
-        tableModel.setRowCount(0); // Clear table first
+        tableModel.setRowCount(0); 
         String sql = "SELECT * FROM items";
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
              PreparedStatement stmt = conn.prepareStatement(sql);
@@ -108,3 +108,4 @@ public class inventory_model {
     }
     
 }
+

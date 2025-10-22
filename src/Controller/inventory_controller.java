@@ -19,7 +19,7 @@ public class inventory_controller {
         this.view = view;
         this.model = model;
 
-        //  Attach button listeners
+        
         viewAddListeners();
         loadTable();
     }
@@ -41,7 +41,7 @@ public class inventory_controller {
         model.loadItemsToTable(modelTable);
     }
 
-    //  ADD
+    //  add
     class AddAction implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             if (model.addItem(
@@ -60,7 +60,7 @@ public class inventory_controller {
         }
     }
 
-    //  UPDATE
+    //  update
     class UpdateAction implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             if (model.updateItem(
@@ -79,7 +79,7 @@ public class inventory_controller {
         }
     }
 
-    //  DELETE
+    //  delete
     class DeleteAction implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             if (model.deleteItem(view.itemId.getText())) {
@@ -91,7 +91,7 @@ public class inventory_controller {
         }
     }
 
-    //  SEARCH
+    //  search
     class SearchAction implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             ResultSet rs = model.searchItem(view.itemId.getText());
@@ -111,7 +111,7 @@ public class inventory_controller {
         }
     }
 
-    //  BACK (to Dashboard)
+    //  back
     class BackAction implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             View.dashboard_view dashView = new View.dashboard_view();
@@ -123,3 +123,4 @@ public class inventory_controller {
     }
     
 }
+

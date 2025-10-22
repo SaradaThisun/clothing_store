@@ -130,7 +130,7 @@ public class order_details_controller {
                 currentOrderId = model.getNextOrderId();
                 System.out.println("New Temporary Order ID started: " + currentOrderId);
             } else {
-                JOptionPane.showMessageDialog(view, "⚠️ Error saving order!");
+                JOptionPane.showMessageDialog(view, " Error saving order!");
             }
         }
     }
@@ -146,4 +146,5 @@ public class order_details_controller {
         }
     }
 }
+
 

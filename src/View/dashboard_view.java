@@ -111,11 +111,11 @@ public class dashboard_view extends javax.swing.JFrame {
         pack();
     }
 
-    private void btnitemsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnitemsActionPerformed
+    private void btnitemsActionPerformed(java.awt.event.ActionEvent evt) {
        
     }
 
-    private void btnorderdetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnorderdetailsActionPerformed
+    private void btnorderdetailsActionPerformed(java.awt.event.ActionEvent evt) {
         
     }
 

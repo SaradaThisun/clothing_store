@@ -17,12 +17,11 @@ public class login_controller {
         this.view = view;
         this.model = model;
 
-        // Attach listeners
         this.view.addbtnloginListener(new LoginListener());
-        this.view.signupListener(new SignupListener()); // added this line
+        this.view.signupListener(new SignupListener()); 
     }
 
-    // Handles the Login button
+    
     class LoginListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -46,7 +45,7 @@ public class login_controller {
         }
     }
 
-    // Handles the Sign Up button
+    // Handles Sign Up button
     class SignupListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -56,9 +55,10 @@ public class login_controller {
             new Controller.user_registration_controller(regView, regModel);
             regView.setVisible(true);
 
-            // Close the login page
+            // Close login page
             view.dispose();
         }
     }
 
 }
+

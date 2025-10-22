@@ -101,7 +101,7 @@ public class order_details_model {
         return success;
     }
     
-    // Get next available Order ID (before insert)
+    // Get next available Order ID
 public int getNextOrderId() {
     String sql = "SELECT AUTO_INCREMENT FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'orders_summary' AND TABLE_SCHEMA = 'clothing_store'";
     try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
@@ -115,8 +115,9 @@ public int getNextOrderId() {
     } catch (Exception e) {
         System.out.println("Error getting next order ID: " + e.getMessage());
     }
-    return 1; // default fallback
+    return 1; 
 }
 
 }
+
 

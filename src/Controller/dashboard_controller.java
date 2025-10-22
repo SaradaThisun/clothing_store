@@ -65,9 +65,9 @@ public class dashboard_controller {
 
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(view, "Opening Reports...");
-                // new reports_view().setVisible(true);
-                // view.dispose();
+                // Already created jasper report in dashboard_view form
             }
         }
     }
+
 

@@ -6,7 +6,7 @@ public class login_model {
 
     private static final String URL = "jdbc:mysql://localhost:3306/clothing_store";
     private static final String USER = "root";
-    private static final String PASSWORD = "1234";
+    private static final String PASSWORD = "";
 
     // Authenticate user credentials
     public boolean checkLogin(String username, String password) {
@@ -28,4 +28,5 @@ public class login_model {
         }
     }
 }
+
 

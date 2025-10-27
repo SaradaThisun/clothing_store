@@ -9,7 +9,7 @@ import javax.swing.table.DefaultTableModel;
 public class inventory_model {
     private static final String URL = "jdbc:mysql://localhost:3306/clothing_store";
     private static final String USER = "root";
-    private static final String PASSWORD = "1234";
+    private static final String PASSWORD = "";
 
     // Add a new item
     public boolean addItem(String id, String name, String qty, String type, String price, String size) {
@@ -108,4 +108,5 @@ public class inventory_model {
     }
     
 }
+
 

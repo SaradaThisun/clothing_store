@@ -7,7 +7,7 @@ import java.sql.*;
 public class user_registration_model {
      private static final String URL = "jdbc:mysql://localhost:3306/clothing_store";
     private static final String USER = "root";
-    private static final String PASSWORD = "1234";
+    private static final String PASSWORD = "";
 
     // Insert new user into database
     public boolean registerUser(String userId, String username, String password) {
@@ -50,4 +50,5 @@ public class user_registration_model {
         }
     }
 }
+
 

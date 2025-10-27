@@ -5,7 +5,7 @@ import java.sql.*;
 public class dashboard_model {
     private static final String URL = "jdbc:mysql://localhost:3306/clothing_store";
     private static final String USER = "root";
-    private static final String PASSWORD = "1234";
+    private static final String PASSWORD = "";
 
     // Get total number of items
     public int getItemCount() {
@@ -37,3 +37,4 @@ public class dashboard_model {
         return 0;
     }
 }
+

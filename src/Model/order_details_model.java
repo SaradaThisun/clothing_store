@@ -8,7 +8,7 @@ public class order_details_model {
 
     private static final String URL = "jdbc:mysql://localhost:3306/clothing_store";
     private static final String USER = "root";
-    private static final String PASSWORD = "1234";
+    private static final String PASSWORD = "";
 
     // Load all item IDs
     public void loadItemIds(JComboBox<String> comboBox) {
@@ -119,5 +119,6 @@ public int getNextOrderId() {
 }
 
 }
+
 
 
